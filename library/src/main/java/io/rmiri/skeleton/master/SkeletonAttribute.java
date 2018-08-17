@@ -1,4 +1,4 @@
-package io.rmiri.skeleton.Master;
+package io.rmiri.skeleton.master;
 
 import android.graphics.Color;
 

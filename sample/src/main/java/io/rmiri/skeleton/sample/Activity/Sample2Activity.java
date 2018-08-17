@@ -10,7 +10,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-import io.rmiri.skeleton.Master.IsCanSetAdapterListener;
+import io.rmiri.skeleton.master.IsCanSetAdapterListener;
 import io.rmiri.skeleton.sample.Adapter.AdapterSample2;
 import io.rmiri.skeleton.sample.Data.DataObject;
 import io.rmiri.skeleton.sample.Data.GeneratesDataFake;
@@ -38,7 +38,7 @@ public class Sample2Activity extends AppCompatActivity {
         });
 
         // Initial recyclerView
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);

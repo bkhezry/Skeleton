@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //find view
-        sample1Btn = (AppCompatButton) findViewById(R.id.sample1Btn);
-        sample2Btn = (AppCompatButton) findViewById(R.id.sample2Btn);
-        sample3Btn = (AppCompatButton) findViewById(R.id.sample3Btn);
-        sample4Btn = (AppCompatButton) findViewById(R.id.sample4Btn);
-        sample5Btn = (AppCompatButton) findViewById(R.id.sample5Btn);
+        sample1Btn = findViewById(R.id.sample1Btn);
+        sample2Btn = findViewById(R.id.sample2Btn);
+        sample3Btn = findViewById(R.id.sample3Btn);
+        sample4Btn = findViewById(R.id.sample4Btn);
+        sample5Btn = findViewById(R.id.sample5Btn);
 
         //set on click listener for buttons
         sample1Btn.setOnClickListener(this);

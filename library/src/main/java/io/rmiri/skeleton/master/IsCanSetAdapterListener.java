@@ -1,4 +1,4 @@
-package io.rmiri.skeleton.Master;
+package io.rmiri.skeleton.master;
 
 /**
  * Created by Rasoul Miri on 12/3/17.
@@ -6,5 +6,5 @@ package io.rmiri.skeleton.Master;
 
 
 public interface IsCanSetAdapterListener {
-    public  void isCanSet();
+    void isCanSet();
 }

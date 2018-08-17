@@ -29,8 +29,8 @@ public class Sample4Activity extends AppCompatActivity {
             }
         });
 
-        skeletonGroup = (SkeletonGroup) findViewById(R.id.skeletonGroup);
-        textTv = (TextView) findViewById(R.id.textTv);
+        skeletonGroup = findViewById(R.id.skeletonGroup);
+        textTv = findViewById(R.id.textTv);
         skeletonGroup.setSkeletonListener(new SkeletonGroup.SkeletonListener() {
             @Override
             public void onStartAnimation() {

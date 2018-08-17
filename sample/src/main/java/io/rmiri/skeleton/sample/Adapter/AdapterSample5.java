@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import io.rmiri.skeleton.Master.AdapterSkeleton;
-import io.rmiri.skeleton.Master.IsCanSetAdapterListener;
 import io.rmiri.skeleton.SkeletonGroup;
+import io.rmiri.skeleton.master.AdapterSkeleton;
+import io.rmiri.skeleton.master.IsCanSetAdapterListener;
 import io.rmiri.skeleton.sample.Data.DataObject;
 import io.rmiri.skeleton.sample.R;
 
