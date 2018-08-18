@@ -17,7 +17,6 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 
 import io.rmiri.skeleton.R;
-import io.rmiri.skeleton.utils.CLog;
 import io.rmiri.skeleton.utils.ConverterUnitUtil;
 
 
@@ -54,7 +53,6 @@ public class SkeletonMaster extends RelativeLayout {
       return;
     }
 
-    CLog.i("SkeletonMaster init  " + position);
 
     // Attribute
     skeletonAttribute = new SkeletonAttribute();
@@ -110,9 +108,6 @@ public class SkeletonMaster extends RelativeLayout {
 
 
   public ArrayList<View> getAllChildren(View v) {
-
-    CLog.i("SkeletonMaster getAllChildren " + position);
-
     if (!(v instanceof ViewGroup)) {
       ArrayList<View> viewArrayList = new ArrayList<View>();
       viewArrayList.add(v);

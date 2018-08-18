@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 import io.rmiri.skeleton.master.SkeletonAttribute;
 import io.rmiri.skeleton.master.SkeletonMaster;
-import io.rmiri.skeleton.utils.CLog;
 import io.rmiri.skeleton.utils.ColorUtils;
 
 
@@ -87,10 +86,8 @@ public class SkeletonGroup extends SkeletonMaster {
   protected void onLayout(boolean changed, int l, int t, int r, int b) {
     super.onLayout(changed, l, t, r, b);
 
-    CLog.i("SkeletonGroup onLayout " + position);
     // Add all children extend from SkeletonView
     if (skeletonAttributesChildren == null && skeletonAttribute.isShowSkeleton()) {
-      CLog.i("SkeletonGroup onLayout and skeletonAttributesChildren == null ... " + position);
       skeletonAttributesChildren = new ArrayList<>();
       for (View child : getAllChildren(getChildAt(0))) {
         if (child instanceof SkeletonView) {
@@ -196,7 +193,6 @@ public class SkeletonGroup extends SkeletonMaster {
               lineNumber = (int) ((skeletonAttributeChild.getY2() - skeletonAttributeChild.getY1())
                 / (lineHeight + lineSpaceVertical));
             }
-            CLog.i("line number  " + lineNumber);
             for (int j = 0; j < lineNumber; j++) {
 
               RectF rectangleRect;
@@ -463,17 +459,17 @@ public class SkeletonGroup extends SkeletonMaster {
 
       @Override
       public void onAnimationRepeat(Animator animation) {
-        CLog.i("SkeletonGroup onAnimationRepeat " + position);
+
 
         if (isCanDrawFinishState) {
-          CLog.i("SkeletonGroup isCanDrawFinishState " + position);
+
           setupFinishingAnimation();
         }
 
 
         if (isLastLoopAnimation) {
           // last repeat animation and start finish animation
-          CLog.i("SkeletonGroup isLastLoopAnimatio " + position);
+
           if (skeletonAttribute.getAnimationFinishType() == SkeletonAttribute.ANIMATION_TYPE_NON) {
             setupFinishingAnimation();
           } else {

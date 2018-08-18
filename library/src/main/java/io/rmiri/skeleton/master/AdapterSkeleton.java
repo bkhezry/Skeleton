@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import io.rmiri.skeleton.utils.CLog;
-
 public abstract class AdapterSkeleton<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
 
   protected Context context;
@@ -34,10 +32,6 @@ public abstract class AdapterSkeleton<T, VH extends RecyclerView.ViewHolder> ext
         skeletonConfig.setItemHeight(view.getRootView().getMeasuredHeight());// Height Item
         skeletonConfig.setNumberItemShow(Math.round(skeletonConfig.getRecyclerViewHeight() / skeletonConfig.getItemHeight()) + 1); // Number item skeleton in adapter
 
-        CLog.i("skeletonConfig.getItemHeight == " + skeletonConfig.getItemHeight()
-          + "   skeletonConfig.getRecyclerViewHeight  " + skeletonConfig.getRecyclerViewHeight()
-          + "   skeletonConfig.getNumberItemShow  " + skeletonConfig.getNumberItemShow());
-
         // Remove ViewTreeObserver
         recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
         isCanSetAdapterListener.isCanSet();
@@ -50,14 +44,13 @@ public abstract class AdapterSkeleton<T, VH extends RecyclerView.ViewHolder> ext
   public int getItemCount() {
     if (skeletonConfig.isSkeletonIsOn()) {
       if (skeletonConfig.getItemHeight() == 0) {
-        CLog.i("getItemCount ==> getItemHeight() is zero : " + "1");
+
         return 1;
       } else {
-        CLog.i("getItemCount ==> getNumberItemShow: " + skeletonConfig.getNumberItemShow());
+
         return skeletonConfig.getNumberItemShow();
       }
     } else {
-      CLog.i("getItemCount ==> items.size(): " + items.size());
       return items.size();
     }
   }
